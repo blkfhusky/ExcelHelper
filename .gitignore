@@ -7,3 +7,4 @@ target/
 #.gitignore
 target/classes/
 target/test-classes/
+/.idea/
