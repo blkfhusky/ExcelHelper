@@ -1,38 +1,25 @@
 package com.zxc;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import com.zxc.core.ExcelBuilder;
+import com.zxc.core.entity.ExcelEntity;
+import com.zxc.utils.FileUtils;
+import org.junit.Test;
+
+import java.io.File;
 
 /**
  * Unit test for simple Application.
  */
-public class ApplicationTest
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public ApplicationTest(String testName )
-    {
-        super( testName );
+public class ApplicationTest {
+
+    @Test
+    public void buildExcel() {
+        String filePath = "/Users/blkfhusky/Desktop/e1.xlsx";
+        File file = FileUtils.getFile(filePath);
+        ExcelBuilder builder = new ExcelBuilder();
+        ExcelEntity entity = builder.buile(file, "1");
+        System.out.println(entity);
+
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( ApplicationTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
 }

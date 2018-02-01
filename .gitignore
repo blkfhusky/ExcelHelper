@@ -1,0 +1,9 @@
+#.idea/
+*.iml
+out
+gen
+src/main/java/com/zxc/conf/
+target/
+#.gitignore
+target/classes/
+target/test-classes/
